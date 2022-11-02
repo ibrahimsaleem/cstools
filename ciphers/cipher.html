@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://sctool.web.app/ciphers/style.css">
+</head>
+
+<body>
+    <!-- nav-bar  -->
+    <section id="nav-bar" class="container">
+        <header class="nav-bar">
+            <div class="brand"><a href="https://sctool.web.app/"><img src="images/logo.png" width="200" height="60" alt=""></a></div>
+            <div class="nav-list">
+                <div class="hamburger">
+                    <div class="bar"></div>
+                </div>
+                <ul>
+                    <br>
+                    
+                        <li><a href="https://sctool.web.app/ciphers/ciphers/caesar.html">
+                            <h6 style="color: white;">Caesar cipher</h6>
+                        </a></li>
+                    <li><a href="https://sctool.web.app/ciphers/ciphers/rot13.html">
+                            <h6 style="color: white;">ROT13 Cipher</h6>
+                        </a></li>
+                    <li><a href="https://sctool.web.app/ciphers/ciphers/vigenere.html">
+                            <h6 style="color: white;">Vigenere Cipher</h6>
+                        </a></li>
+                    <li><a href="https://sctool.web.app/ciphers/ciphers/morsecode.html">
+                            <h6 style="color: white;">Morse Code</h6>
+                        </a></li>
+                    <li><a href="https://sctool.web.app/tools.html">
+                            <h6 style="color: white;">Tools</h6>
+                        </a></li>
+
+                </ul>
+            </div>
+        </header>
+    </section>
+    <hr>
+    <!-- End nav-bar  -->
+
+
+
+
+    
+    <section id="d">
+        <div class="hello">
+        <div class="hello3"> 
+          <p> <hr><br>
+            <b>What is Text Encryption-Decryption? <br>What is a cipher?</b></p>
+
+        </div>
+        <div id="content">
+            <p style="color: white;">A cipher is a way of encrypting and decrypting messages by following a pattern of steps. They can range from
+                being very simple to extremely complex and impossible to decode without the correct key. There are two
+                different main types of classical ciphers: substitution ciphers and transposition ciphers.</p>
+            <div id="set">
+                <img class="image" src="images/shifts/shift_2.png" alt="Image example showing a caesar shift of 2">
+                <p style="color: white;">A substitution cipher swaps letters in a message for other letters. For example, the ROT13 Cipher has a
+                    key of 13 so each letter is swapped by the character that is 13 characters along the alphabet. A
+                    transposition cipher is where the letters stay the same, but the order of the letters are swapped
+                    according to some design. The simplest example of this would reversing the order of a message, so “send
+                    help” is turned into “pleh dnes”</p>
+            </div>
+            <p style="color: white;">There are many YouTube videos explaining ciphers and cryptography available online. The following videos are
+                good starting points for learning cryptography</p>
+            <div id="youtube_videos">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-yFZGF8FHSg" frameborder="0"
+                    allow="encrypted-media" allowfullscreen
+                    alt="Youtube video about making and breaking code ciphers"></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-Gk9kaFoBxU" frameborder="0"
+                    allow="encrypted-media" allowfullscreen
+                    alt="Youtube video cryptography lesson introducing the idea of block ciphers"></iframe>
+            </div>
+            <br />
+            <h2 style="color: white;">Background information</h2>
+            <p style="color: white;">Cryptography, the use of codes and ciphers to protect secrets, began thousands of years ago. Until recent
+                decades, it has been the story of what might be called classic cryptography — that is, of methods of
+                encryption that use pen and paper, or perhaps simple mechanical aids. In the early 20th century, the
+                invention of complex mechanical and electromechanical machines, such as the Enigma rotor machine, provided
+                more sophisticated and efficient means of encryption; and the subsequent introduction of electronics and
+                computing has allowed elaborate schemes of still greater complexity, most of which are entirely unsuited to
+                pen and paper.</p>
+            <p style="color: white;">The use of codes and ciphers to obscure communication has been around for thousands of years with pen and
+                paper using classical cryptography. By the time World War 2 came around, ciphers had advanced into
+                electronic cipher machines. This was very useful for keeping sensitive information confidential and played a
+                key role in both World War 1 and 2 for communication between allies. The Germans relied on communicating
+                with an Enigma machine as it was so mathematically difficult to break the message keys. To add to the
+                difficulty the Germans would switch cipher keys daily, meaning that even if by chance the cipher key was
+                cracked it would be useless for any other day. When the Enigma code was finally cracked it is thought to
+                have reduced the length of World War 2 by up to two years.<br />
+                Modern algorithms typically involve the use of a public key and private key and are extremely secure. When
+                the technological advancement that is supercomputers and quantum computing arrive, new encryption methods
+                will have be deployed to ensure data is not prone to brute force attacks.</p>
+    
+            <h2 style="color: white;">Select a cipher to find out more!</h2> <br />
+            <div id="try" class="center">
+                <a href="ciphers/caesar.html"><img class="try_thumbnail" src="images/thumbnails/2.png"
+                        alt="Caesar Cipher clickable thumbnail"></a>
+                <a href="ciphers/rot13.html"><img class="try_thumbnail" src="images/thumbnails/3.png"
+                        alt="ROT13 Cipher clickable thumbnail"></a>
+                <a href="ciphers/vigenere.html"><img class="try_thumbnail" src="images/thumbnails/4.png"
+                        alt="Vigenere Cipher clickable thumbnail"></a>
+                <a href="ciphers/morsecode.html"><img class="try_thumbnail" src="images/thumbnails/5.png"
+                        alt="Morse Code clickable thumbnail"></a>
+            </div>
+            <br>
+            <br>
+
+        </div>
+        
+        <script type="text/javascript" src="js/animations.js"></script>
+
+
+
+
+ <!-- Hire Section  -->
+ <section id="hire" class="hire container">
+    <h1 class="hire-heading">If you need any kind of help regarding Cyber Security, Kindly</h1>
+    <a href="https://cybercrime.gov.in/" target="_blank" type="button" class="hire-button">Click Here</a>
+  </section>
+  <!-- End Hire Section  -->
+  
+
+  <!-- Footer section  -->
+  <footer id="footer" class="footer container">
+    <div class="footer-contact">
+        <h1 class="footer-contact-heading">Contact Me</h1>
+        <p class="footer-contact-info">Email:ibrahimsaleem9123@gmail.com</p>
+        <p class="footer-contact-info">    Mobile: +91 722 399 0578</p>
+    </div>
+    <div class="footer-social-follow">
+        <h1 class="footer-social-follow-heading">Follow Me</h1>
+        <div class="footer-social-icon">
+            <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
+        </div>
+    </div>
+</footer>
+  <!-- End Footer section  -->
+  <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+.row
+{
+	margin-top: 0.5rem;
+}
+
+.topics
+{
+	margin-top: 2rem;
+}
+
+.container{
+	background-color: black;
+	color: rgb(255, 255, 255);
+}
+
+.col-sm-12{
+	color: rgb(255, 255, 255);
+}

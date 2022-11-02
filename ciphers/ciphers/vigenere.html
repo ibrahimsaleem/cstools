@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Cipher Central</title>
+            <link rel="icon" type="image/x-icon" href="../favicon.png">
+            <link rel="stylesheet" type="text/css" href="../style.css">
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Indie+Flower|Neucha|Special+Elite|Bungee" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+            <meta charset="UTF-8">
+            <meta name="description" content="Cyber Security - Cryptography Information with Encoders and Decoders">
+            <meta name="keywords" content="Cipher,Encode,Decode,Encrypt,Decrypt,Caesar,ROT13,Vigenere,Morse">
+            <meta name="author" content="Alex McGill">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <section id="nav-bar" class="container">
+            <br>
+            <header class="nav-bar">
+                <div class="brand"><a href="https://sctool.web.app/index.html"><img src="/ciphers/images/logo2.png" width="200" height="60" alt=""></a></div>
+                <div class="nav-list">
+                    <div class="hamburger">
+    
+                        <div class="bar"></div>
+                    </div>
+                    <ul>
+                        <br>
+                        <li><a href="https://sctool.web.app/index.html">
+                                <h6 style="color: black;">Home</h6>
+                            </a></li>
+                        <li><a href="https://sctool.web.app/ciphers/ciphers/rot13.html">
+                                <h6 style="color: black;">ROT13 Cipher</h6>
+                            </a></li>
+                            <li><a href="https://sctool.web.app/ciphers/ciphers/caesar.html">
+                                <h6 style="color: black;">Caesar cipher</h6>
+                            </a></li>
+                        <li><a href="https://sctool.web.app/ciphers/ciphers/morsecode.html">
+                                <h6 style="color: black;">Morse Code</h6>
+                            </a></li>
+                        <li><a href="https://sctool.web.app/tools.html">
+                                <h6 style="color: black;">Tools</h6>
+                            </a></li>
+    
+                    </ul>
+                </div>
+            </header>
+            <hr style="color: black;">
+        </section>
+    
+        <div id="content">
+            <br>
+            <div class="large_vertical_spacer"></div>
+            <hr style="color: black;">
+            <br>
+            <h2>Vigenere Cipher</h2>
+            <div class="vertical_spacer"></div>
+            <div id="set">
+                <img class="image" src="../images/shifts/shift_keyword.png"  alt="Image example showing a Vigenere cipher with multiple shifts, using the keyword 'LUNCH'">
+                <p>The Vigenere cipher is a polyalphabetic cipher that was invented in the 16th century. This method of encryption uses multiple of Caesar ciphers with a keyword to switch the key every letter rather than a single key, making it harder to decrypt. As it is polyalphabetic cipher, it is not vulnerable to regular decryption cracking methods such as frequency analysis because multiple letters can be represented the same letter.<br />
+                It works by getting the value of each letter in the keyword and using that as the amount to shift for the letter in the message. For example, if the message was “HELP” and the keyword was “abc”, then the Caesar cipher key values would be 0,1,2,0. When the key runs out of characters it loops back to the start of the keyword. The encrypted message would be “HFNP”.</p>
+            </div>
+            <h2>Try it out!</h2>
+            <br />
+            <div id="try" class="center">
+                <textarea class="custom" id="textarea_input" rows="10" style="margin-left:2%" placeholder="Enter your normal message here . . . "></textarea>
+                <div id="encrypt_decrypt">
+                    <h3 id="small_h3">KEY: <input id="vigenere_key" type="text"  title="Enter a word for the cipher key"></h3>
+                    <button type="button" class="encode_button" onclick="vigenere_encrypt()" id="vigenere_encode_button" style="margin-left: 2%;">Encrypt</button>
+                    <button type="button" class="encode_button" onclick="vigenere_decrypt()" id="vigenere_decode_button" style="margin-left: 2%;">Decrypt</button>
+                    
+                    <div id="controls">
+                        <button id="swap_btn" type="button" class="control_button" onclick="swapTextArea()" title="Swap the text in the input and output boxes">&#x21C6</button>
+                        <button id="clear_btn" type="button" class="control_button" onclick="clearTextArea()" title="Clear the text in the input and output boxes">CLEAR</button>
+                    </div>
+                </div>
+                <textarea class="custom scroll_bg" rows="10" id="textarea_output"style="margin-right:2%" placeholder="Enter your encrypted message here . . . "></textarea>
+            </div>
+            <div class="large_vertical_spacer"></div>
+            <h2>Additional information</h2>
+            <p>For more information about the Vigenere Cipher check out this YouTube video:</p>
+            <div id="youtube_videos">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/SkJcmCaHqS0" frameborder="0" allow="encrypted-media" allowfullscreen alt="Youtube video explaining more information about the Vigenere cipher"></iframe>
+            </div>
+        </div>
+        <script type="text/javascript" src="../js/cipher_functions.js"></script>
+         <!-- Hire Section  -->
+ <section id="hire" class="hire container">
+    <h1 class="hire-heading">If you need any kind of help regarding Cyber Security, Kindly</h1>
+    <a href="https://cybercrime.gov.in/" target="_blank" type="button" class="hire-button">Click Here</a>
+  </section>
+  <!-- End Hire Section  -->
+
+  <!-- Footer section  -->
+  <footer id="footer" class="footer container">
+    <div class="footer-contact">
+        <h1 class="footer-contact-heading">Contact Me</h1>
+        <p class="footer-contact-info">Email:ibrahimsaleem9123@gmail.com</p>
+        <p class="footer-contact-info">    Mobile: +91 722 399 0578</p>
+    </div>
+    <div class="footer-social-follow">
+        <h1 class="footer-social-follow-heading">Follow Me</h1>
+        <div class="footer-social-icon">
+            <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
+        </div>
+    </div>
+</footer>
+<script src="./app.js"></script>
+    </body>
+</html>

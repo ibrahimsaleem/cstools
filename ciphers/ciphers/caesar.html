@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Caesar cipher</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.png">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Indie+Flower|Neucha|Special+Elite|Bungee"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Cipher - Cryptography Information with Encoders and Decoders">
+    <meta name="keywords" content="Cipher,Encode,Decode,Encrypt,Decrypt,Caesar,ROT13,Vigenere,Morse">
+    <meta name="author" content="Alex McGill">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+<body>
+    <!-- nav-bar  -->
+    <section id="nav-bar" class="container">
+        <br>
+        <header class="nav-bar">
+            <div class="brand"><a href="https://sctool.web.app/index.html"><img src="/ciphers/images/logo2.png"
+                        width="200" height="60" alt=""></a></div>
+            <div class="nav-list">
+                <div class="hamburger">
+
+                    <div class="bar"></div>
+                </div>
+                <ul>
+                    <br>
+                    <li><a href="https://sctool.web.app/index.html">
+                            <h6 style="color: black;">Home</h6>
+                        </a></li>
+                    <li><a href="https://sctool.web.app/ciphers/ciphers/rot13.html">
+                            <h6 style="color: black;">ROT13 Cipher</h6>
+                        </a></li>
+                    <li><a href="https://sctool.web.app/ciphers/ciphers/vigenere.html">
+                            <h6 style="color: black;">Vigenere Cipher</h6>
+                        </a></li>
+                    <li><a href="https://sctool.web.app/ciphers/ciphers/morsecode.html">
+                            <h6 style="color: black;">Morse Code</h6>
+                        </a></li>
+                    <li><a href="https://sctool.web.app/tools.html">
+                            <h6 style="color: black;">Tools</h6>
+                        </a></li>
+
+                </ul>
+            </div>
+        </header>
+        <hr style="color: black;">
+    </section>
+
+    <div id="content">
+        <br>
+        <div class="large_vertical_spacer"></div>
+        <hr style="color: black;">
+        <br>
+        <h2>Caesar Cipher</h2>
+        <div class="vertical_spacer"></div>
+        <div id="set">
+            <img class="image" src="../images/shifts/shift_3.png"
+                alt="Image example showing a Caesar cipher with a shift of 3">
+            <p>The Caesar cipher is a substitution cipher that shifts each letter in the message by the value of the
+                key. For example, if the message was “send help” and the key was 3 then the encrypted message would be
+                “vhqg khos”.<br />
+                As it is a substitution cipher it is vulnerable to common decryption cracking methods such as frequency
+                analysis meaning it provides virtually no security for communication. Even without the key, using a
+                brute force attack on the encrypted message can be broken within 25 attempts. This is because there are
+                only 26 characters in the alphabet meaning that there are only 25 different possible key shifts. Using a
+                key of anything over 25 would provide an output than has already been tested.</p>
+        </div>
+        <h2>Try it out!</h2>
+        <br />
+        <div id="try" class="center">
+            <textarea class="custom" id="textarea_input" rows="10" style="margin-left:2%"
+                placeholder="Enter your normal message here . . . "></textarea>
+            <div id="encrypt_decrypt">
+                <h3>KEY: <input id="caesar_key" type="number" title="Enter a number for the cipher key"></h3>
+                <button type="button" class="encode_button" onclick="caesar_encrypt()"
+                    id="caesar_encode_button">Encrypt</button>
+                <button type="button" class="encode_button" onclick="caesar_decrypt()"
+                    id="caesar_decode_button">Decrypt</button>
+
+                <div id="controls">
+                    <button id="swap_btn" type="button" class="control_button" onclick="swapTextArea()"
+                        title="Swap the text in the input and output boxes">&#x21C6</button>
+                    <button id="clear_btn" type="button" class="control_button" onclick="clearTextArea()"
+                        title="Clear the text in the input and output boxes">CLEAR</button>
+                </div>
+            </div>
+            <textarea class="custom scroll_bg" rows="10" id="textarea_output" style="margin-right:2%"
+                placeholder="Enter your encrypted message here . . . "></textarea>
+        </div>
+        <div class="large_vertical_spacer"></div>
+        <h2>Additional information</h2>
+        <p>For more information about the Caesar Cipher check out this YouTube video:</p>
+        <div id="youtube_videos">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/LVHeW1hcdRk" frameborder="0"
+                allow="encrypted-media" allowfullscreen
+                alt="Youtube video explaining more information about the Caesar cipher"></iframe>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/cipher_functions.js"></script>
+    <!-- Hire Section  -->
+    <section id="hire" class="hire container">
+        <h1 class="hire-heading">If you need any kind of help regarding Cyber Security, Kindly</h1>
+        <a href="https://cybercrime.gov.in/" target="_blank" type="button" class="hire-button">Click Here</a>
+    </section>
+    <!-- End Hire Section  -->
+
+    <!-- Footer section  -->
+    <footer id="footer" class="footer container">
+        <div class="footer-contact">
+            <h1 class="footer-contact-heading">Contact Me</h1>
+            <p class="footer-contact-info">Email:ibrahimsaleem9123@gmail.com</p>
+            <p class="footer-contact-info"> Mobile: +91 722 399 0578</p>
+        </div>
+        <div class="footer-social-follow">
+            <h1 class="footer-social-follow-heading">Follow Me</h1>
+            <div class="footer-social-icon">
+                <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="./app.js"></script>
+
+</body>
+
+</html>

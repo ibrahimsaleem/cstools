@@ -1,0 +1,30 @@
+Python script to change MAC address of Linux machine
+What is MAC Address?
+In a computer network, the MAC Address is used at the lowest networking level,where network interfaces
+communicate with one another.
+Need of changing MAC Address:
+    To bypass MAC Address filtering
+    To bypass certain kind of MITM spoofing attack
+    To avoid device tracking in a public network
+There are many other tasks like becoming anonymous in a network and to avoid some network attacks 
+where changing MAC Address becomes useful.
+
+Changing MAC Address in Linux Machine: In Linux, a simple way to change MAC address is by using 
+ifconfig command.
+
+For that we are using 3 python modules here
+1st is subprocess 
+subprocess is used to execute system commands 
+    IT contain a number of functions
+    These functions allow us to execute system commands
+    commands depend on the OS which execute the script
+
+2nd is optparse
+Optparse module makes easy to write command-line tools.
+    It allows argument parsing in the python program.
+    optparse make it easy to handle the command-line argument.
+
+3rd is re which is regular expresssion
+Python has a built-in package called re, which can be used to work with Regular Expressions.
+    The re module offers a set of functions that allows us to search a string for a match.
+    

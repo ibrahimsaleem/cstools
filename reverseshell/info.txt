@@ -1,0 +1,31 @@
+There are many ways to gain control over a compromised system. A common practice is to gain interactive shell access, which enables you to try to gain complete control of the operating system. However, most basic firewalls block direct remote connections. One of the methods to bypass this is to use reverse shells.
+A reverse shell is a program that executes local cmd.exe (for Windows) or bash/zsh (for Unix-like) commands and sends the output to a remote machine. With a reverse shell, the target machine initiates the connection to the attacker machine, and the attacker's machine listens for incoming connections on a specified port; this will bypass firewalls.
+
+The basic idea of the code we will implement is that the attacker's machine will keep listening for connections. Once a client (or target machine) connects, the server will send shell commands to the target machine and expect output results.
+
+
+How do reverse shells work?
+
+In a typical remote system access scenario, the user has the role of a client, and the target machine acts as a server. The user initiates a remote shell connection while the target system listens for such connections.
+
+In the case of a reverse shell, these roles are switched: the target machine initiates the connection to the user while the user’s computer listens for incoming connections on a specified port.
+
+Reverse shells are often used by attackers because they are not stopped by the most common firewall configurations. The targeted servers usually allow connections only on specific ports, so, for example, a dedicated web server will only accept connections on ports 80 and 443. This makes it impossible to establish a shell listener on the attacked server. Another reason might be that the server is located behind a NAT (network address translation) layer.
+
+A typical reverse shell attack scenario
+
+Since getting a reverse shell is just one stage of an attack, here is an example chain of events that involves the use of a reverse shell:
+
+    The attacker discovers a remote code execution (RCE) vulnerability in www.example.com and also establishes that www.example.com lets users upload their own images without testing whether the uploaded file is a valid image.
+    The attacker uploads a Python reverse shell script to www.example.com, disguising it as an image by calling the file test.jpg.
+    The attacker uses the RCE vulnerability to execute the uploaded test.jpg Python script.
+    The test.jpg script establishes a connection to port 80 of the attacker’s machine. The attacker is now able to send shell commands to the www.example.com web server.
+    The attacker can now attempt privilege escalation. For example, they may find a vulnerability in the operating system that allows them to gain root access to the server.
+
+Hackers create two python file  called server.py and cilent.py and send cilent file to cilents computer/system in this file ip address and port of attackers computer is stored then hackers send this script via mail , usb and when victim open this file they creates a reverse connection to the hackers computer.
+An IP is dynamic so its useless in the file so for that hackers create a server store ip address of the server in the reverse shell file because server has static ip ADDRESSES.
+
+If you want to hack someones computer or wanted to help somebody you can send this python script(cilent.py) via email or directly(only If you are doing this with the permission of the user/friend) else, if you want to access someones computer withour his/her permission then you can send this scipt via mail or usb first you have to convert cilent.py file into exe file.This is very simple below is the video to guide you how to change a py file into an exe. 
+It is mandatory to put your ipv4 address into cilent file before sending it.
+Once cilent open your file it will create a reverse connection now boom we have the 
+access of the victims computer,It is necessary that the server file must be running on your system.

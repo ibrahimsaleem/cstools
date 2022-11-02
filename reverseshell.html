@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- nav-bar  -->
+    <section id="nav-bar" class="container">
+        <header class="nav-bar">
+            <div class="brand"><a href="index.html"><img src="images/logo.png" width="200" height="60" alt=""></a></div>
+            <div class="nav-list">
+                <div class="hamburger">
+                    <div class="bar"></div>
+                </div>
+                <ul>
+                    <br>
+                    <li><a href="index.html">
+                            <h6>About</h6>
+                        </a></li>
+                    <li><a href="index.html">
+                            <h6>Threats</h6>
+                        </a></li>
+                    <li><a href="index.html">
+                            <h6>Counter-Measures</h6>
+                        </a></li>
+                    <li><a href="index.html">
+                            <h6>Do's and Dont's</h6>
+                        </a></li>
+                    <li><a href="tools.html">
+                            <h6>Tools</h6>
+                        </a></li>
+
+                </ul>
+            </div>
+        </header>
+    </section>
+    <hr>
+    <!-- End nav-bar  -->
+    <section id="d">
+        <div class="hello">
+        <div class="hello3">
+            
+          <p><br>  <hr><br>
+            <b>What is Reverse Shell Attack and How to use it</b></p>
+        </div>
+        <div class="hello4" style="clear: left;">
+            <p style="float: right;"><img src="/reverseshell/main.jpeg" height="300" width="600" border="1px" style="margin:0px 20px"></p>
+           <br> <p><h2>There are many ways to gain control over a compromised system.<br> A common practice is to gain interactive shell access, which enables you to try to gain complete control of the operating system. However, most basic firewalls block direct remote connections. One of the methods to bypass this is to use reverse shells.
+            <br><br>A reverse shell is a program that executes local cmd.exe (for Windows) or bash/zsh (for Unix-like) commands and sends the output to a remote machine. With a reverse shell, the target machine initiates the connection to the attacker machine, and the attacker's machine listens for incoming connections on a specified port; this will bypass firewalls.
+            </h2><br>
+        </p>
+        <!-- Auto width -->
+        <button class="btn"><i class="fa fa-download"></i> <a href="/reverseshell/cilent.py" download="client.py">Client File</a></button>
+        <button class="btn"><i class="fa fa-download"></i> <a href="/reverseshell/multiserver2.py" download="multiserver2.py">Server File</a></button>
+
+        <ul>
+              <br><br><li><b><h2>The basic idea of the code we will implement is that the attacker's machine will keep listening for connections. Once a client (or target machine) connects, the server will send shell commands to the target machine and expect output results.
+            </h2></b></li>
+             
+        
+              <br><br><li><b><h2>How do reverse shells work?
+            </h2></b></li>
+            <br>
+            <img src="/reverseshell/1.png" height="250" width="600" border="1px" style="margin:0px 20px">
+            <br>
+            <br><p><h3>In a typical remote system access scenario, the user has the role of a client, and the target machine acts as a server.<br> The user initiates a remote shell connection while the target system listens for such connections.
+
+                <br>In the case of a reverse shell, these roles are switched: the target machine initiates the connection to the user while the user’s computer <br>listens for incoming connections on a specified port.
+                
+               <br><br> Reverse shells are often used by attackers because they are not stopped by the most common firewall configurations. The targeted servers usually allow connections only on specific ports, so, for example, a dedicated web server will only accept connections on ports 80 and 443. This makes it impossible to establish a shell listener on the attacked server.<br> Another reason might be that the server is located behind a NAT (network address translation) layer.</h3></p>
+             <br> <p></b></p>
+        
+              <br><br><li><b><h2>A typical reverse shell attack scenario
+            </h2></h2></b></li>
+             <br> <p><h3>Since getting a reverse shell is just one stage of an attack, here is an example chain of events that involves the use of a reverse shell:
+
+                <br>The attacker discovers a remote code execution (RCE) vulnerability in www.example.com and also establishes that www.example.com lets users upload their own images without testing whether the uploaded file is a valid image.
+                <br>The attacker uploads a Python reverse shell script to www.example.com, disguising it as an image by calling the file test.jpg.
+                <br>The attacker uses the RCE vulnerability to execute the uploaded test.jpg Python script.
+                <br>The test.jpg script establishes a connection to port 80 of the attacker’s machine. The attacker is now able to send shell commands to the www.example.com web server.
+                <br>The attacker can now attempt privilege escalation. For example, they may find a vulnerability in the operating system that allows them to gain root access to the server.
+            </h3></p>
+            <br>
+            <img src="/reverseshell/2.png" height="300" width="500" border="1px" style="margin:0px 20px">
+            <br>
+        
+        <br><br><li><b><h2>About our tool</h2></b></li>
+             <br> <p><h3>Hackers create two python file called server.py and cilent.py and send cilent file to cilents computer/system in this file ip address and port of attackers computer is stored then hackers send this script via mail , usb and when victim open this file they creates a reverse connection to the hackers computer.
+                An IP is dynamic so its useless in the file so for that hackers create a server store ip address of the server in the reverse shell file because server has static ip ADDRESSES.</h3></p>
+        
+        <br><br><li><b><h2>How to use
+            </h2></b></li>
+            <br> <p><h3>If you want to hack someones computer or wanted to help somebody you can send this python script(cilent.py) via email or directly(only If you are doing this with the permission of the user/friend) else, if you want to access someones computer withour his/her permission then you can send this scipt via mail or usb first you have to convert cilent.py file into exe file.<br><br>This is very simple below is the video to guide you how to change a py file into an exe.
+                It is mandatory to put your ipv4 address into cilent file before sending it.
+                Once cilent open your file it will create a reverse connection now boom we have the
+                access of the victims computer,It is necessary that the server file must be running on your system.
+            </h3></p>
+
+             <br> <p><iframe width="560" height="315" src="https://www.youtube.com/embed/UZX5kH72Yx4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </p>
+        
+        
+            </ul>
+        <br><br><b><h2> This is for Educational purposes only ! </h2></b>
+            <br><br><br>
+        </div>
+        </div></div></section>
+  <!-- Hire Section  -->
+  <section id="hire" class="hire container">
+    <h1 class="hire-heading">If you need any kind of help regarding Cyber Security, Kindly</h1>
+    <a href="https://cybercrime.gov.in/" target="_blank" type="button" class="hire-button">Click Here</a>
+  </section>
+  <!-- End Hire Section  -->
+
+  <!-- Footer section  -->
+  <footer id="footer" class="footer container">
+    <div class="footer-contact">
+        <h1 class="footer-contact-heading">Contact Me</h1>
+        <p class="footer-contact-info">Email: ibrahimsaleem9123@gmail.com</p>
+        <p class="footer-contact-info">Mobile: +91 722 399 0578</p>
+    </div>
+    <div class="footer-social-follow">
+        <h1 class="footer-social-follow-heading">Follow Me</h1>
+        <div class="footer-social-icon">
+            <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
+        </div>
+    </div>
+    <footer style="text-align: center; margin-top: 20px; margin-bottom: 10px; color: rgb(255, 255, 255);">
+        &copy; 2022 by <a href="mailto:ibrahimsaleem9123@gmail.com">Ibrahim Saleem</a>
+      </footer>
+</footer>
+
+  <!-- End Footer section  -->
+  <script src="./app.js"></script>
+</body>
+</html>

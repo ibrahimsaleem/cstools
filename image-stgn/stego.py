@@ -5,6 +5,7 @@ import argparse
 import sys
 import random
 import re
+import secrets
 
 parser = argparse.ArgumentParser(description="Image Steganography\n[+] Use .png files only")
 parser.add_argument('-e',type=str,help="To embed a message in the image")
@@ -29,7 +30,7 @@ try:
 					args.p = "no_password_given"
 				embed = args.p +" "+ args.e
 				secret = lsb.hide(args.f,embed)
-				random = random.randint(0,100)
+				random = secrets.SystemRandom().randint(0,100)
 				filename = "secret"+str(random)+".png"
 				secret.save(filename)
 				print("File Saved as ",filename)

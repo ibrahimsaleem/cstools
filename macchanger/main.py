@@ -2,6 +2,7 @@
 import subprocess
 import optparse
 import re
+from security import safe_command
 
 def get_arguments():
         parser = optparse.OptionParser()
@@ -17,9 +18,9 @@ def get_arguments():
         return option
 def mac_changer(interface,new_mac):
         print("[+] Changing the mac address for " + interface + " to new_mac address")
-        subprocess.call("ifconfig " + interface + " down",shell=True)
-        subprocess.call("ifconfig " + interface + " hw ether " + new_mac,shell=True)
-        subprocess.call("ifconfig " + interface + " up",shell=True)
+        safe_command.run(subprocess.call, "ifconfig " + interface + " down",shell=True)
+        safe_command.run(subprocess.call, "ifconfig " + interface + " hw ether " + new_mac,shell=True)
+        safe_command.run(subprocess.call, "ifconfig " + interface + " up",shell=True)
 
 def get_current_mac(interface):
     """ this function follow an algorithm."""
